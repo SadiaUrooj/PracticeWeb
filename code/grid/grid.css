@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* -it helps to nottake exta space. */
+    box-sizing: border-box;
+    background-color: white;
+}
+
+main {
+    width: 75%;
+    /* margin: top bottom left right;  auto means center*/
+    margin: 50px auto;
+    border: 1px solid black;
+    display: grid;
+    /* color: white; */
+    grid-template-rows: 60px 100px 200px 60px;
+    grid-template-columns: repeat(3, 1fr) 100px;
+    /* including row and column */
+    grid-gap: 20px;
+}
+
+.div1 {
+    background-color: violet;
+    /* it will take the full length of the box horizontally. */
+    grid-column: 1/-1;
+}
+.div2 {
+    background-color: antiquewhite;
+}
+.div3 {
+    background-color: aqua;
+}
+.div4  {
+    background-color: blueviolet
+}
+.div5 {
+    background-color: pink;
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+.div6 {
+    background-color: yellow;
+    /* cause it needed to fill till the above three boxes. or grid-column: 1/4;*/
+    grid-column: 1/ span 3;
+}
+.div7 {
+    background-color: palegreen;
+    grid-column: 1/-1;
+}

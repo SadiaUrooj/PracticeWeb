@@ -1,0 +1,60 @@
+* {
+    /* arrount the text */
+    padding: 0;
+    /* outside the border */
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+section {
+    width: 100%;
+    background: cyan;
+    /* for flex box, have to put this inside the parent element. */
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: center; 
+    -it adjusts left to right*/
+    /* justify-content: space-around; */
+    /* to make the size of box accounding to the text side. 
+    -it adjusts up and down.*/
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+}
+
+/* the divs inside the section tag. */
+section div {
+    /* width: 30%; */
+    /* -more responsive and provide the work of width. */
+    flex-basis: 30%;
+    padding: 20px;
+    /* arrount the padding. */
+    border: 1px solid black;
+}
+
+/* for flex shrink and grow. */
+.flexbox-one {
+    /* 3% of the rest flexboxes. -flex: 3; */
+    /* flex: 1; */
+    background-color: aliceblue;
+}
+.flexbox-two {
+    /* flex: 1; */
+    background-color: antiquewhite;
+}
+.flexbox-three {
+    /* flex: 1; */
+    background-color: aquamarine;
+}
+
+/* for responsive in mobole. */
+@media(min-width: 768px) {
+    section {
+        /* for flex box, have to put this inside the parent element. */
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; 
+        -it adjusts left to right*/
+        justify-content: space-between;
+    }
+}
